@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff5f8;
+  color: #444;
+  overflow-x: hidden;
+}
+h1{
+    color: #d95c7a;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Floral side borders */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 80px;
+  height: 100vh;
+  background-image: url("background.flowered.PNG");
+  background-size: cover;
+  opacity: 0.25;
+  z-index: -1;
+}
+body::before { left: 0; }
+body::after { right: 0; transform: scaleX(-1); }
+
+#start {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #b85c7a;
+}
+
+#content {
+  display: none;
+}
+
+section {
+  height: 100vh;
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 21px;
+  line-height: 1.7;
+  animation: fade 1.5s ease;
+}
+
+.soft {
+  color: #a24c6b;
+}
+
+.shayari {
+  font-style: italic;
+  color: #8d3f5d;
+}
+
+.pause {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.thankyou {
+  font-size: 28px;
+  color: #7a2f4d;
+}
+
+.image img {
+  max-width: 45%;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
